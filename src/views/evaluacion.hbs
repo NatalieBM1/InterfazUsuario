@@ -1,0 +1,79 @@
+
+<div class="max-w-2xl mx-auto p-6 bg-white shadow-xl rounded-lg">
+  <h2 class="text-2xl font-bold mb-6 text-center">EVALUACIÓN CALIDAD IES</h2>
+
+  <form action="/evaluacion/guardarEvaluacion" method="POST" class="mt-4"> 
+
+    <div>
+      <label for="programa" class="block text-sm font-medium text-gray-700">Programa académico</label>
+      <input type="text" id="programa" name="programa" required
+             class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+    </div>
+    <br>
+
+    <div>
+      <label for="infraestructura" class="block text-sm font-medium text-gray-700">Infraestructura</label>
+      <select name="infraestructura" id="infraestructura" required
+              class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+        <option value="">Seleccione una opción</option>
+        <option value="Excelente">Excelente</option>
+        <option value="Buena">Buena</option>
+        <option value="Regular">Regular</option>
+        <option value="Deficiente">Deficiente</option>
+      </select>
+    </div>
+    <br>
+
+    <div>
+      <label for="docentes" class="block text-sm font-medium text-gray-700">Calidad de los docentes</label>
+      <select name="docentes" id="docentes" required
+              class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+        <option value="">Seleccione una opción</option>
+        <option value="Excelente">Excelente</option>
+        <option value="Buena">Buena</option>
+        <option value="Regular">Regular</option>
+        <option value="Deficiente">Deficiente</option>
+      </select>
+    </div>
+    <br>
+
+    <div>
+      <label for="servicios" class="block text-sm font-medium text-gray-700">Servicios ofrecidos</label>
+      <select name="servicios" id="servicios" required
+              class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+        <option value="">Seleccione una opción</option>
+        <option value="Excelente">Excelente</option>
+        <option value="Buena">Buena</option>
+        <option value="Regular">Regular</option>
+        <option value="Deficiente">Deficiente</option>
+      </select>
+    </div>
+    <br>
+
+    <div>
+      <label for="satisfaccion" class="block text-sm font-medium text-gray-700">Nivel de satisfacción general</label>
+      <input type="range" min="1" max="10" id="satisfaccion" name="satisfaccion" class="w-full">
+    </div>
+    <br>
+
+    <div>
+      <label for="comentarios" class="block text-sm font-medium text-gray-700">Comentarios adicionales</label>
+      <textarea name="comentarios" id="comentarios" rows="4"
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+                placeholder="Escriba sus observaciones aquí..."></textarea>
+    </div>
+    <br>
+
+    <div class="text-center">
+      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Enviar evaluación</button>
+    </div>
+    <br>
+
+    <div class="text-center">
+        <button type="button" onclick="window.location.href='/'" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+            Regresar al inicio
+        </button>
+    </div>
+
+  </form>
+</div>

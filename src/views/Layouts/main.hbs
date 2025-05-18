@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SISTEMA AUTOEVALUACIÓN</title>
+    
+    <!-- Tailwind CSS Link -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css">
+
+    <!-- Fontawesome Link -->
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+ 
+  </head>
+  <body class ="bg-gray-200">
+    <nav class="flex py-5 bg-blue-500 text-white px-24">
+        <div class="w-1/2 px-12 mr-auto">
+        <h1 class="text-2x1 front-bold">SISTEMA AUTOEVALUACIÓN</h1>
+        </div>
+        
+        <ul class="w-1/2 px-16 ml-auto flex justify-end pt-1">
+        {{#if nombre}}
+        <li class="nav-item px-4 flex items-center justify-center">
+          <p class="font-serif text-center">Bienvenido {{nombre}}</p>
+        </li>
+
+        <li class="nav-item px-4">
+            <a href="/evaluacion" class="nav-link font-serif border-white hover:bg-blue-700 py-3 px-4 rounded-md">Evaluación</a>
+        </li>
+                
+        <li class="nav-item px-4">
+            <a href="/logout" class="nav-link font-serif border-white hover:bg-blue-700 py-3 px-4 rounded-md">Cerrar Sesión</a>
+        </li>
+
+        {{else}}
+        <li class="nav-item px-4">
+            <a href="/inicio" class="nav-link font-serif hover:bg-blue-700 py-3 px-4 rounded-md">Iniciar Sesión</a>
+        </li>
+
+        <li class="nav-item px-4">
+            <a href="/registro" class="nav-link font-serif border-white hover:bg-white 
+            hover:text-blue-700 py-3 px-4 rounded-md">Crear Cuenta</a>
+        </li>
+
+        {{/if}}        
+        </ul>
+        
+    </nav>
+  
+  {{{body}}}
+  
+  </body>
+</html>

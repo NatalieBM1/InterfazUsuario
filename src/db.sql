@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS loginuser;
+
+USE loginuser;
+
+CREATE TABLE IF NOT EXISTS users (
+    email VARCHAR(100) NOT NULL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    apellido VARCHAR(50) NOT NULL,
+    IES VARCHAR(100) NOT NULL,
+    contraseña VARCHAR(255) NOT NULL
+);
